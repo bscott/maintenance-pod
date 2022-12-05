@@ -33,10 +33,7 @@ iputils-ping \
 telnet \ 
 vim \ 
 nano 
-RUN wget -qO - https://www.mongodb.org/static/pgp/server-3.6.asc | apt-key add - 
-RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.6.list 
 RUN apt-get update 
-RUN apt-get install apache2-utils -y 
-RUN apt-get install -y mongodb-org-shell mongodb-org-tools 
+RUN apt-get install apache2-utils -y  
 CMD ["sh", "-c", "tail -f /dev/null"] 
 WORKDIR /home
