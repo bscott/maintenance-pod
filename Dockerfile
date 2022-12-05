@@ -35,5 +35,6 @@ vim \
 nano 
 RUN apt-get update 
 RUN apt-get install apache2-utils -y  
+RUN apt-get upgrade -y
 CMD ["sh", "-c", "tail -f /dev/null"] 
 WORKDIR /home
